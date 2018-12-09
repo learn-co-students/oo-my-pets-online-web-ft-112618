@@ -68,13 +68,21 @@ class Owner
   end
 
   def sell_pets
-    pets.clear
-    pets.each_key do |mood|
-      pets[].mood = "nervous"
+    pets.each do |type, list|
+      list.each do |animal|
+        animal.mood = "nervous"
+      end
+      #pets.mood = "nervous"
     end
+    pets.clear
     #access all the pets for each key and set their mood back to nervous
     #access all pets (the key values in the array assigned to @pets)
     #remove the values for each of the three keys
+  end
+
+  def list_pets
+    #binding.pry
+    "I have #{pets[:fishes].count} fish, #{pets[:dogs].count} dog(s), and #{pets[:cats].count} cat(s)."
   end
 
 end
