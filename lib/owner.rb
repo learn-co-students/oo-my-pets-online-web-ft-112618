@@ -64,9 +64,17 @@ class Owner
   end
 
   def sell_pets
-    #binding.pry
      self.pets.map {|type, pets| pets.map {|pet| pet.mood = "nervous"}}
      self.pets = {:fishes => [], :dogs => [], :cats => []}
+
+       #alternate way
+    #    pets.each do |species, animals|
+    #     animals.each do |animal|
+    #       animal.mood = "nervous"
+    #     end
+    #     animals.clear
+    #   end
+    # end
   end
 
   def list_pets
